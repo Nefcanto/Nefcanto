@@ -1,0 +1,22 @@
+﻿[
+  {
+    "icon": "list",
+    "title": "نکات قرآن",
+    "path": "/quranNotes/list"
+  },
+  {
+    "icon": "list",
+    "title": "نکات سوره ها",
+    "path": "/chapterNotes/list"
+  },
+  {
+    "icon": "list",
+    "title": "نکات آیات",
+    "path": "/verseNote/list"
+  },
+  {
+    "icon": "list",
+    "title": "موضوعات قرآنی",
+    "path": "/topic/list"
+  }
+]

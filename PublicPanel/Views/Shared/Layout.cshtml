@@ -1,0 +1,19 @@
+﻿@using Holism.Jquery;
+@{
+    Layout = Config.Layout;
+    if (ViewBag.Title == null)
+    {
+        ViewBag.Title = Holism.Web.Config.Brand + " - " + Holism.Web.Config.Slogan;
+    }
+
+}
+@section CustomHeaders {
+    <partial name="GoogleAnalytics" />
+}
+@section Styles {
+    <link href="/styles/all.css" type="text/css" rel="stylesheet" />
+}
+@section Scripts {
+    @RenderSection("Scripts", false)
+}
+@RenderBody()

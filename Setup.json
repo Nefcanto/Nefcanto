@@ -1,0 +1,14 @@
+[
+  {
+    "name": "local.nefcanto",
+    "path": "%SaeedProjectsRoot%\\NefcantoWeb\\PublicPanel"
+  },
+  {
+    "name": "local.nefcanto.admin",
+    "path": "%SaeedProjectsRoot%\\NefcantoWeb\\AdminPanel"
+  },
+  {
+    "name": "local.nefcanto.admin.vue",
+    "path": "%SaeedProjectsRoot%\\NefcantoWeb\\VueAdminPanel"
+  }
+]

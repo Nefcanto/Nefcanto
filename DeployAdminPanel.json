@@ -1,0 +1,4 @@
+{
+  "project": "%SaeedProjectsRoot%\\NefcantoWeb\\AdminPanel\\AdminPanel.csproj",
+  "inherits": "%SaeedProjectsRoot%\\NefcantoWeb\\Deploy.json"
+}

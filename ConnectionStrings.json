@@ -1,0 +1,9 @@
+{
+  "Master": "data source=.;initial catalog=master;user id=developer; password=Repoleved123;application name=Nefcanto;",
+  "Quran": "data source=.; initial catalog=Quran; user id=developer; password=Repoleved123;application name=Nefcanto;",
+  "ArabicLanguage": "data source=.; initial catalog=ArabicLanguage; user id=developer; password=Repoleved123;application name=Nefcanto;",
+  "SaeedQuran": "data source=.; initial catalog=SaeedQuran; user id=developer; password=Repoleved123;application name=Nefcanto;",
+  "Configuration": "data source=.; initial catalog=Configuration; user id=developer; password=Repoleved123;application name=Nefcanto;",
+  "Identities": "data source=.; initial catalog=Identities; user id=developer; password=Repoleved123;application name=Nefcanto;",
+  "Nefcanto": "data source=.; initial catalog=Nefcanto; user id=developer; password=Repoleved123;application name=Nefcanto;"
+}

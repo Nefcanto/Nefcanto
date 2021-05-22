@@ -1,0 +1,10 @@
+﻿#objectiveTruth > div {
+    float: right;
+    margin-left: 25px;
+}
+
+#objectiveTruth:after {
+    content: '';
+    display: block;
+    clear: both;
+}
