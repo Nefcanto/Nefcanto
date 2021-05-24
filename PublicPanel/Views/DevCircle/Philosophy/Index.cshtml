@@ -139,7 +139,8 @@
         <ul>
             <li>State management
                 <ul>
-                    <li>For intra-project state, don't use Redux</li>
+                    <li>DO NOT use Redux, or other state management libraries, blindly everywhere</li>
+                    <li>For intra-project state, don't use Redux. Simply manage state inside that component</li>
                     <li>For parent-child components, use whatever that framework offers</li>
                     <li>For other cross-component communications, use Redux</li>
                 </ul>
