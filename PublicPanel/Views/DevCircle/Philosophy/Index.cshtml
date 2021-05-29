@@ -124,6 +124,15 @@
         <ul>
             <li>Because a lot of times we use the database directly (SSMS), and we need to be able to understand numerical values</li>
             <li>Number/text mapping = enum in code = enum table in database</li>
+            <li>Views to join numbers and texts (data tables with reference tables)</li>
+            <li>Database tests to keep code-level enums mapped with database reference tables</li>
+            <li>Reusable centralized code to expose enums to clients (Web, Android, iOS, etc.) through API</li>
+            <li>Policies to ensure proper enum definition, both at database level and code level</li>
+            <li>Having an <b>Unknown</b> value in all enums that mapps to 0</li>
+            <li>Keeping enums POCO, without attributes and other stuff</li>
+            <li>Keeping enum reference tables lightweight</li>
+            <li>No translation of enum keys in database and code, only in client and according to the selected culture</li>
+            <li>Committing enum table's static data into VCS</li>
         </ul>
     </li>
     <li>Use Environment Variables for Project Collections</li>
