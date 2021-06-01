@@ -17,20 +17,20 @@
     <li>API per role</li>
     <li>Panel per role</li>
     <li>Either:
-		<ul>
-			<li>Role * Modules = Number of projects (.csproj files)</li>
-			<li>Reusables only up to common APIs and common Webs, runnables API and panel per role</li>
-		</ul>
-	</li>
+        <ul>
+            <li>Role * Modules = Number of projects (.csproj files)</li>
+            <li>Reusables only up to common APIs and common Webs, runnables API and panel per role</li>
+        </ul>
+    </li>
     <li>The number is for PC, the text is for human</li>
-	<li>Have FHS (file-system hierarchy standard)
-		<ul>
-			<li>Linux has it</li>
-			<li>Laravel has it</li>
-			<li>Angular has it</li>
-			<li>...</li>
-		</ul>
-	</li>
+    <li>Have FHS (file-system hierarchy standard)
+        <ul>
+            <li>Linux has it</li>
+            <li>Laravel has it</li>
+            <li>Angular has it</li>
+            <li>...</li>
+        </ul>
+    </li>
     <li>Conventions at the max-level of business entity</li>
     <li>
         Pyramid of expertise
@@ -114,7 +114,8 @@
             <li>
                 it's about the calendar, date-time, number, concurrency, etc. (culture)
                 <ul>
-                    <li>And built-in cultures are not consistent with widespread usage too. For example, we don't use ق.ظ and ب.ظ in Persian.</li>
+                    <li>And built-in cultures are not consistent with widespread usage too. For example, we don't use
+                        ق.ظ and ب.ظ in Persian.</li>
                 </ul>
             </li>
         </ul>
@@ -122,7 +123,8 @@
     <li>
         Enums in database
         <ul>
-            <li>Because a lot of times we use the database directly (SSMS), and we need to be able to understand numerical values</li>
+            <li>Because a lot of times we use the database directly (SSMS), and we need to be able to understand
+                numerical values</li>
             <li>Number/text mapping = enum in code = enum table in database</li>
             <li>Views to join numbers and texts (data tables with reference tables)</li>
             <li>Database tests to keep code-level enums mapped with database reference tables</li>
@@ -131,7 +133,8 @@
             <li>Having an <b>Unknown</b> value in all enums that mapps to 0</li>
             <li>Keeping enums POCO, without attributes and other stuff</li>
             <li>Keeping enum reference tables lightweight</li>
-            <li>No translation of enum keys in database and code, only in client and according to the selected culture</li>
+            <li>No translation of enum keys in database and code, only in client and according to the selected culture
+            </li>
             <li>Committing enum table's static data into VCS</li>
         </ul>
     </li>
@@ -161,11 +164,27 @@
         <ul>
             <li>Developers should only "declare" things:
                 <ul>
-                    <li>This list has huge data => infra won't show linked pagination, and will show infinite scrolling.</li>
+                    <li>This list has huge data => infra won't show linked pagination, and will show infinite scrolling.
+                    </li>
                     <li>These are my menu items => infra shows them a it pleases and where it wants.</li>
-                    <li>I need a country/city cascade/browse here => infra shows the fields, and fills them with data and provides browsing and cascading functionality.</li>
+                    <li>I need a country/city cascade/browse here => infra shows the fields, and fills them with data
+                        and provides browsing and cascading functionality.</li>
                 </ul>
             </li>
+        </ul>
+    </li>
+    <li>
+        Data generation
+        <ul>
+            <li>Use a faker library
+                <ul>
+                    <li>https://github.com/faker-ruby/faker for Ruby</li>
+                    <li>https://github.com/fzaninotto/Faker for PHP</li>
+                    <li>...</li>
+                </ul>
+            </li>
+            <li>Extend in case of necessity</li>
+            <li>Should be reusable across the entire projects of holding, EASILY</li>
         </ul>
     </li>
 </ul>
