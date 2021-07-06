@@ -1,21 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup Label="Globals">
-    <SccProjectName>SAK</SccProjectName>
-    <SccProvider>SAK</SccProvider>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccLocalPath>SAK</SccLocalPath>
-  </PropertyGroup>
+  <Import Project="/HolismDotNet/Framework/DotNet.targets" />
 
   <PropertyGroup>
-    <AssemblyName>Saeed.NefcantoWeb.AdminPanel</AssemblyName>
-    <RootNamespace>Saeed.NefcantoWeb.AdminPanel</RootNamespace>
+    <AssemblyName>Nefcanto.AdminPanel</AssemblyName>
+    <RootNamespace>Nefcanto.AdminPanel</RootNamespace>
   </PropertyGroup>
 
-  <Import Project="$(HolismProjectsRoot)\WebUi\ProjectAdminPanel.targets" />
-  <Import Project="$(HolismProjectsRoot)\Api\ProjectApi.targets" />
-  <Import Project="$(HolismProjectsRoot)\Identities\ProjectPublicApi.targets" />
-  <Import Project="$(HolismProjectsRoot)\IdentitiesWeb\ProjectAdminPanel.targets" />
-  <Import Project="$(DataProjectsRoot)\QuranWeb\ProjectAdminPanel.targets" />
+  <Import Project="/HolismDotNet\Framework\Api.targets" />
+  <!-- <Import Project="$(DataProjectsRoot)\Quran\Project.targets" />
+  <Import Project="$(JzpProjectsRoot)\Language\Project.targets" />
+  <Import Project="$(JzpProjectsRoot)\Arabic\Project.targets" />
+  <Import Project="$(SaeedProjectsRoot)\Quran\Project.targets" /> -->
 
 </Project>

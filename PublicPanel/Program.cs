@@ -1,4 +1,4 @@
-﻿using Holism.Web;
+﻿using Holism.Api;
 
 namespace Saeed.NefcantoWeb.PublicPanel
 {
@@ -20,10 +20,9 @@ namespace Saeed.NefcantoWeb.PublicPanel
         public static void Main(string[] args)
         {
             Startup.AddControllerSearchAssembly(typeof(Controllers.DefaultController).Assembly);
-            Startup.AddViewSearchAssembly(typeof(Controllers.DefaultController).Assembly);
-            Startup.AddControllerSearchAssembly(typeof(Holism.Mvc.GeneralController).Assembly);
-            Holism.Jquery.Config.ConfigureEverything();
-            Holism.Vue.Config.ConfigureEverything();
+            // Startup.AddViewSearchAssembly(typeof(Controllers.DefaultController).Assembly);
+            Startup.AddControllerSearchAssembly(typeof(Holism.Api.Controllers.GeneralController).Assembly);
+            // Holism.Jquery.Config.ConfigureEverything();
             Application.Run();
         }
     }

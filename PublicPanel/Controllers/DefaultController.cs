@@ -1,9 +1,8 @@
-﻿using Holism.Mvc;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Saeed.NefcantoWeb.PublicPanel.Controllers
 {
-    public class DefaultController : GeneralController
+    public class DefaultController : Holism.Api.Controllers.DefaultController
     {
         public IActionResult Index()
         {
