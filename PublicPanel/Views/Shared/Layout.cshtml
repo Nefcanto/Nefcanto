@@ -1,7 +1,7 @@
 ﻿@{
     if (ViewBag.Title == null)
     {
-        ViewBag.Title = Holism.Web.Config.Brand + " - " + Holism.Web.Config.Slogan;
+        ViewBag.Title = Holism.Framework.Config.GetSetting("Brand") + " - " + Holism.Framework.Config.GetSetting("Slogan");
     }
 
 }
