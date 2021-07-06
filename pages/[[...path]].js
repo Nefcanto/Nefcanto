@@ -1,3 +1,6 @@
+const fs = require('fs');
+const path = require('path');
+
 const index = (props) => {
     const path = props.path;
 
@@ -15,7 +18,24 @@ const index = (props) => {
 }
 
 export async function getServerSideProps(context) {
-    return { props: { path: context.params.path || [] } }
+    const urlPaths = context.params.path || [];
+    var filePath = path.join.apply(null, [...urlPaths, 'index.html']);
+    if (!fs.existsSync(filePath)) {
+        filePath = path.join.apply(null, [...urlPaths, '.md']);
+    }
+    if (!fs.existsSync(filePath)) {
+        filePath = path.join.apply(null, [...urlPaths, 'index.html']);
+    }
+    const content = "";
+    fs.readFileSync(__dirname + '/../contents/' + filePath, 'utf8', (err, data) => {
+        if (err) {
+            console.error(err);
+        }
+        else {
+            content = data;
+        }
+    });
+    return { props: { path: urlPaths, content: contnet } }
 }
 
 export default index;
