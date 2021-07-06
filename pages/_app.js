@@ -8,7 +8,6 @@ function MyApp({ Component, pageProps }) {
                 <title>{process.env.BRAND} - {process.env.SLOGAN}</title>
                 <link rel="icon" href="/images/favicon.ico" />
             </Head>
-            <h1>Layout</h1>
             <Component {...pageProps} />
         </>
     );

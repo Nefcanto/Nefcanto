@@ -58,24 +58,46 @@ const index = () => {
                         <li>
                             <a href="/natural-sciences/modern-physics">فیزیک مدرن</a>
                         </li>
+                        {
+                            //immunology
+                            //mycology
+                            //botony
+                            //history of drugs
+                            //pharmacology
+                            //microbiology
+                        }
                     </ul>
-
-                    {
-                        //immunology
-                        //mycology
-                        //botony
-                        //history of drugs
-                        //pharmacology
-                        //microbiology
-                    }
                 </div>
                 <div>
                     <a href="/applied-sciences">علوم کاربردی</a>
-                    <partial name="/Views/AppliedSciences/Menu.cshtml" />
+                    <ul>
+                        <li>
+                            <a href="/applied-sciences/touch-typing">تایپ ده انگشتی</a>
+                        </li>
+                        <li>
+                            <a href="/applied-sciences/software-development">برنامه نویسی</a>
+                        </li>
+                    </ul>
                 </div>
                 <div>
                     <a href="/social-sciences">علوم اجتماعی</a>
-                    <partial name="/Views/SocialSciences/Menu.cshtml" />
+                    <ul>
+                        <li>
+                            <a href="/social-sciences/economics">اقتصاد</a>
+                        </li>
+                        <li>
+                            <a href="/social-sciences/relationship">رابطه</a>
+                        </li>
+                        <li>
+                            <a href="/social-sciences/linguistics">زبان شناسی</a>
+                        </li>
+                        <li>
+                            <a href="/social-sciences/arabic-grammar">گرامر عربی</a>
+                        </li>
+                        <li>
+                            <a href="/social-sciences/music">موسیقی</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <hr />

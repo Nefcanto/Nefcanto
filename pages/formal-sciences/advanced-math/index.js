@@ -1,0 +1,15 @@
+const index = () => {
+    return (
+        <>
+            <h1>ریاضیات پیشرفته</h1>
+
+            <ul>
+                <li>
+                    <a href="/formal-sciences/advanced-math/multiple-integral">انتگرال چندگانه</a>
+                </li>
+            </ul>
+        </>
+    );
+}
+
+export default index;
