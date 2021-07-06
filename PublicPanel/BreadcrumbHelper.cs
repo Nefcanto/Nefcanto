@@ -28,7 +28,7 @@ namespace Saeed.NefcantoWeb.PublicPanel
             {
                 filePath = Path.Combine(AppContext.BaseDirectory, "..", fileName);
             }
-            var json = File.ReadAllText(filePath).JsonDeserialize<JArray>();
+            var json = File.ReadAllText(filePath).Deserialize<JArray>();
             foreach (var item in json)
             {
                 pathSegmentTranslations.Add(item["key"].ToString(), item["value"].ToString());

@@ -21,7 +21,7 @@ namespace Saeed.NefcantoWeb.PublicPanel
         {
             Startup.AddControllerSearchAssembly(typeof(Controllers.DefaultController).Assembly);
             // Startup.AddViewSearchAssembly(typeof(Controllers.DefaultController).Assembly);
-            Startup.AddControllerSearchAssembly(typeof(Holism.Api.Controllers.GeneralController).Assembly);
+            // Startup.AddControllerSearchAssembly(typeof(Holism.Api.Controllers.DefaultController).Assembly);
             // Holism.Jquery.Config.ConfigureEverything();
             Application.Run();
         }
