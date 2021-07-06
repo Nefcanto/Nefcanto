@@ -1,9 +1,0 @@
-﻿@using Holism.Web;
-
-@{
-    Layout = Layouts.FormAnatomy;
-}
-
-@Html.Partial(Fields.BrowseField, new BrowseFieldParameters { ColumnName = "ChapterNumber", Entity = "Chapter", Placeholder = "سوره", Required = "سوره انتخاب نشده است" })
-@Html.Partial(Fields.TextField, new Field { IsInteger = true, Name = "VerseNumber", Required = "برای کدام آیه؟", PlaceHolder = "آیه" })
-@Html.Partial(Fields.TextAreaField, new TextAreaFieldParameters { ColumnName = "Note", PlaceHolder = "نکته", RequiredErrorMessage = "نکته را ننوشته اید" })
