@@ -1,3 +1,8 @@
+const Breadcrumb = ({ urlSegments }) => {
+    return <div>{urlSegments.map(i => <span> {i} /</span>)}</div>
+}
+
+export default Breadcrumb;
 /*
 @using Holism.Framework;
 @using System.Text.RegularExpressions;
