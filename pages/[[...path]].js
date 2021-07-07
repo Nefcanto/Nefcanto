@@ -4,6 +4,9 @@ import Error from 'next/error'
 
 const index = ({ urlSegments, content, errorCode }) => {
 
+    // set title from <h1> or first line with # in markdowns
+    // include disqus maybe
+
     if (errorCode) {
         return <Error statusCode={errorCode} />
     }
