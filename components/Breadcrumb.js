@@ -9,9 +9,10 @@ const Breadcrumb = ({ urlSegments }) => {
         })
     }
     return <div className="breadcrumb">
+            <a href="/">home</a><span>&gt;</span>
         {
             items.map(i => <>
-            <a href={i.url}>{i.text}</a><span>></span></>)
+            <a href={i.url}>{i.text}</a><span>&gt;</span></>)
         }
     </div>
 }

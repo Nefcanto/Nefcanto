@@ -13,7 +13,7 @@ const index = ({ urlSegments, content, errorCode }) => {
     }
 
     if (urlSegments.length == 0) {
-        <div dangerouslySetInnerHTML={{ __html: content }}></div>
+        return <div dangerouslySetInnerHTML={{ __html: content }}></div>
     }
 
     return <>
