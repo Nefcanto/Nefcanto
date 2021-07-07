@@ -1,5 +1,19 @@
 const Breadcrumb = ({ urlSegments }) => {
-    return <div>{urlSegments.map(i => <span> {i} /</span>)}</div>
+    let url = "";
+    let items = [];
+    for (let i = 0; i < urlSegments.length; i++) {
+        url = url + '/' + urlSegments[i];
+        items.push({
+            url: url,
+            text: urlSegments[i]
+        })
+    }
+    return <div className="breadcrumb">
+        {
+            items.map(i => <>
+            <a href={i.url}>{i.text}</a><span>></span></>)
+        }
+    </div>
 }
 
 export default Breadcrumb;
