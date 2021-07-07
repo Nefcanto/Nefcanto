@@ -15,7 +15,7 @@ getAllFiles(path.join(process.cwd(), 'contents', 'PublicPanel', 'Views'));
 const baseSource = path.join(process.cwd(), 'contents', 'PublicPanel', 'Views');
 const baseTarget = path.join(process.cwd(), 'contents');
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < files.length; i++) {
     const relativePath = files[i].replace(baseSource, '');
     console.log(relativePath)
     const segments = relativePath.split('/');
@@ -32,6 +32,7 @@ for (let i = 0; i < 10; i++) {
     console.log(formattedSegments);
     const targetPath = path.join(baseTarget, path.join.apply(null, formattedSegments)).replace('.cshtml', '.html');
     console.log(targetPath);
+    fs.mkdirSync(path.dirname(targetPath), { recursive: true })
     fs.copyFile(files[i], targetPath, (err) => {
         if (err) throw err;
         console.log(`${files[i]} is copied to ${targetPath}`);
