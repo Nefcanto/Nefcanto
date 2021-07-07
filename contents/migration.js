@@ -12,8 +12,28 @@ function getAllFiles(directory) {
 
 getAllFiles(path.join(process.cwd(), 'contents', 'PublicPanel', 'Views'));
 
-const basePath = path.join(process.cwd(), 'contents', 'PublicPanel', 'Views');
+const baseSource = path.join(process.cwd(), 'contents', 'PublicPanel', 'Views');
+const baseTarget = path.join(process.cwd(), 'contents');
+
 for (let i = 0; i < 10; i++) {
-    const relativePath = files[i].replace(basePath, '');
+    const relativePath = files[i].replace(baseSource, '');
     console.log(relativePath)
+    const segments = relativePath.split('/');
+    console.log(segments);
+    const formattedSegments = segments.map(i =>
+        i
+            .replace(/([A-Z])/g, ' $1')
+            .trim()
+            .split(' ')
+            .map(i => i.toLowerCase())
+            //.filter(i => i.length > 0)
+            .reduce((path, i) => path + '-' + i)
+    );
+    console.log(formattedSegments);
+    const targetPath = path.join(baseTarget, path.join.apply(null, formattedSegments)).replace('.cshtml', '.html');
+    console.log(targetPath);
+    fs.copyFile(files[i], targetPath, (err) => {
+        if (err) throw err;
+        console.log(`${files[i]} is copied to ${targetPath}`);
+    });
 }
