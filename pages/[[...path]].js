@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 import Error from 'next/error';
 import Breadcrumb from '../components/Breadcrumb';
+const marked = require("marked");
 
 const index = ({ urlSegments, content, errorCode }) => {
 
@@ -41,6 +42,9 @@ export async function getServerSideProps({ params, res }) {
     else {
         try {
             var content = fs.readFileSync(filePath, 'utf8');
+            if (filePath.endsWith('.md')) {
+                content = marked(content);
+            }
             const result = { props: { urlSegments: urlSegments, content: content } };
             return result;
         } catch (e) {
