@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get /HolismHolding/Infra
+        run: |
+          mkdir /HolismHolding
+          chmod -R 777 /HolismHolding
+          cd /HolismHolding
+          git clone https://github.com/HolismHolding/Infra
+      - name: Get /HolismReact/Site
+        run: |
+          mkdir /HolismReact
+          chmod -R 777 /HolismReact
+          cd /HolismReact
+          git clone https://github.com/HolismReact/Site
