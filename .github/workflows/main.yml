@@ -15,13 +15,13 @@ jobs:
     steps:
       - name: Get /HolismHolding/Infra
         run: |
-          mkdir /HolismHolding
-          chmod -R 777 /HolismHolding
+          sudo mkdir /HolismHolding
+          sudo chmod -R 777 /HolismHolding
           cd /HolismHolding
           git clone https://github.com/HolismHolding/Infra
       - name: Get /HolismReact/Site
         run: |
-          mkdir /HolismReact
-          chmod -R 777 /HolismReact
+          sudo mkdir /HolismReact
+          sudo chmod -R 777 /HolismReact
           cd /HolismReact
           git clone https://github.com/HolismReact/Site
