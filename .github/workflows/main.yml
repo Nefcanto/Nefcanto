@@ -31,4 +31,4 @@ jobs:
       - name: Build production docker
         run: |
           cd /Nefcanto/Nefcanto
-          /HolismHolding/Infra/Commands/Build.sh
+          /HolismHolding/Infra/Commands/Build
