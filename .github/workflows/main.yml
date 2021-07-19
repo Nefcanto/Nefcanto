@@ -29,4 +29,6 @@ jobs:
           cd /Nefcanto
           git clone https://github.com/Nefcanto/Nefcanto
       - name: Build production docker
-        run: /HolismHolding/Infra/Build.sh
+        run: |
+          cd /Nefcanto/Nefcanto
+          /HolismHolding/Infra/Commands/Build.sh
