@@ -19,9 +19,14 @@ jobs:
           sudo chmod -R 777 /HolismHolding
           cd /HolismHolding
           git clone https://github.com/HolismHolding/Infra
-      - name: Get /HolismReact/Site
+      - name: Get /Nefcanto/Nefcanto
         run: |
-          sudo mkdir /HolismReact
-          sudo chmod -R 777 /HolismReact
-          cd /HolismReact
-          git clone https://github.com/HolismReact/Site
+          sudo mkdir /Nefcanto
+          sudo chmod -R 777 /Nefcanto
+          cd /Nefcanto
+          git clone https://github.com/Nefcanto/Nefcanto
+      - name: Build production docker
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: /HolismHolding/Infra/Build.sh
