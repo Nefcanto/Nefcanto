@@ -18,7 +18,7 @@ const index = ({ urlSegments, content, errorCode }) => {
     }
 
     return <>
-        <Breadcrumb urlSegments={urlSegments}/>
+        <Breadcrumb urlSegments={urlSegments} />
         <div dangerouslySetInnerHTML={{ __html: content }}></div>
     </>
 }
@@ -27,6 +27,9 @@ export async function getServerSideProps({ params, res }) {
     const urlSegments = params.path || [];
     const diskSegments = [process.cwd(), 'contents'].concat(urlSegments);
     var filePath = path.join.apply(null, [...diskSegments, 'index.html']);
+    if (!fs.existsSync(filePath)) {
+        filePath = path.join.apply(null, [...diskSegments, 'index.md']);
+    }
     if (!fs.existsSync(filePath)) {
         filePath = path.join.apply(null, [...diskSegments]) + '.md';
     }
