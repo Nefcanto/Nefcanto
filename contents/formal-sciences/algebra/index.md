@@ -1,3 +1,4 @@
 ﻿# Algebra
 
-[Variable](variable)
+- [Variable](variable)
+- [Number Properties](number-properties)

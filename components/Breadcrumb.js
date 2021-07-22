@@ -1,7 +1,10 @@
 const Breadcrumb = ({ urlSegments }) => {
     let url = "";
     let items = [];
-    for (let i = 0; i < urlSegments.length; i++) {
+    for (let i = 0; i < urlSegments.length - 1; i++) {
+        if (urlSegments[i] == 'index') {
+            continue;
+        }
         url = url + '/' + urlSegments[i];
         items.push({
             url: url,
@@ -12,7 +15,7 @@ const Breadcrumb = ({ urlSegments }) => {
             <a href="/">home</a><span>&gt;</span>
         {
             items.map(i => <>
-            <a href={i.url}>{i.text}</a><span>&gt;</span></>)
+            <a href={i.url + '/index'}>{i.text}</a><span>&gt;</span></>)
         }
     </div>
 }
