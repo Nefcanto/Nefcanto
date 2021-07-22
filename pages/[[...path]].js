@@ -46,6 +46,7 @@ export async function getServerSideProps({ params, res }) {
         try {
             var content = fs.readFileSync(filePath, 'utf8');
             if (filePath.endsWith('.md')) {
+                content = '' + content;
                 content = marked(content);
             }
             const result = { props: { urlSegments: urlSegments, content: content } };
@@ -60,3 +61,5 @@ export async function getServerSideProps({ params, res }) {
 }
 
 export default index;
+
+// algabra => 

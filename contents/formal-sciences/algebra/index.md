@@ -1,0 +1,3 @@
+﻿# Algebra
+
+[Variable](variable)
