@@ -8,14 +8,14 @@ const Breadcrumb = ({ urlSegments }) => {
         url = url + '/' + urlSegments[i];
         items.push({
             url: url,
-            text: urlSegments[i]
+            text: urlSegments[i].split('-').map(i => i.charAt(0).toUpperCase() + i.slice(1)).join(' ')
         })
     }
     return <div className="breadcrumb">
-            <a href="/">home</a><span>&gt;</span>
+            <a href="/">Home</a><span>&gt;</span>
         {
-            items.map(i => <>
-            <a href={i.url + '/index'}>{i.text}</a><span>&gt;</span></>)
+            items.map(i => <span key={i.url}>
+            <a href={i.url + '/index'}>{i.text}</a><span>&gt;</span></span>)
         }
     </div>
 }
