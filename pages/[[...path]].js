@@ -46,7 +46,9 @@ export async function getServerSideProps({ params, res }) {
         try {
             var content = fs.readFileSync(filePath, 'utf8');
             if (filePath.endsWith('.md')) {
-                content = '' + content;
+                if (content.charCodeAt(0) == 65279) {
+                    content = content.slice(1);
+                }
                 content = marked(content);
             }
             const result = { props: { urlSegments: urlSegments, content: content } };
